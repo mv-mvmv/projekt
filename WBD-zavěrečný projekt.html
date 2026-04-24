@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marcela Vodáková + ChatGPT GPT-5.3">
+    <title>CESTOVÁNÍ PO HORÁCH</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+             background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Alps_mountain.jpg');
+background-size: cover;
+background-position: center;
+            background-size: cover;
+            color: rgba(131, 213, 238, 0.664);
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.6);
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px;
+        }
+
+        nav a {
+            color: #0026ff;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            background: rgba(0,0,0,0.7);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 15px auto;
+
+        }
+
+        /* Akordeon */
+        .accordion {
+            background-color: #333;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .panel {
+            display: none;
+            padding: 10px;
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CESTOVÁNÍ PO HORÁCH</h1>
+    <h2>Objev krásy přírody</h2>
+</header>
+
+<nav>
+    <a href="#sekce1">ALPY</a>
+    <a href="#sekce2">TATRY</a>
+    <a href="#sekce3">KRKONOŠE</a>
+</nav>
+
+<section id="sekce1">
+    <h2>Alpy</h2>
+    <p>Alpy jsou největší pohoří v Evropě.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Mont_Blanc_oct_2004.JPG">
+    <button class="accordion">Více informací</button>
+    <div class="panel">
+        <p>Ideální pro lyžování a turistiku.</p>
+    </div>
+
+    <a href="#">Zpět nahoru</a>
+</section>
+
+<section id="sekce2">
+    <h2>Tatry</h2>
+    <p>Nejvyšší pohoří Slovenska.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Lomnicky_and_Kezmarsky_stit_from_Skalnate_pleso_II.jpg">
+
+    <button class="accordion">Více informací</button>
+    <div class="panel">
+        <p>Vysoké Tatry jsou velmi oblíbené.</p>
+    </div>
+
+    <a href="#">Zpět nahoru</a>
+</section>
+
+<section id="sekce3">
+    <h2>Krkonoše</h2>
+    <p>Nejvyšší pohoří České republiky.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Sn%C4%9B%C5%BEka_from_%C4%8Cern%C3%A1_hora_%28CZE%29.jpg">
+
+    <button class="accordion">Více informací</button>
+    <div class="panel">
+        <p>Sněžka je nejvyšší vrchol.</p>
+    </div>
+
+    <a href="#">Zpět nahoru</a>
+</section>
+
+<footer>
+    <p>&copy; mv-hory</p>
+</footer>
+
+<script>
+    const acc = document.querySelectorAll(".accordion");
+
+    acc.forEach(btn => {
+        btn.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+
+</body>
+</html>
